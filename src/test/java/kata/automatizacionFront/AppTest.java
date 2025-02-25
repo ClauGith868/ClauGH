@@ -42,7 +42,7 @@ public class AppTest {
 		WebElement message = driver.findElement(By.xpath("//div[@class='oxd-alert-content oxd-alert-content--error']"));
 		String value = message.getText();
 		assertEquals("Invalid credentials", value);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 	
 	@Test
@@ -63,13 +63,13 @@ public class AppTest {
 		WebElement message = driver.findElement(By.xpath("//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']"));
 		String value = message.getText();
 		assertEquals("Required", value);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 	
 	@Test
 	public void emptyUsernameAndPassword() throws InterruptedException {
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 		String title = driver.getTitle();
@@ -86,7 +86,7 @@ public class AppTest {
 		WebElement passwordMessage = driver.findElement(By.xpath("(//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message'][normalize-space()='Required'])[2]"));
 		value = passwordMessage.getText();
 		assertEquals("Required", value);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 	
 
