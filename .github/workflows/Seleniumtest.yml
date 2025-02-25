@@ -28,14 +28,14 @@ jobs:
       # Paso 3: Crear el archivo .json con los datos de configuración de las pruebas
       - name: Generate JSON for test configuration
         run: |
-          echo {
-          echo "  \"Escritorio\": [" > test-config.json
-          echo "    {\"Escritorio\": \"Test Case 1\", \"description\": \"Test Description 1\"}," >> test-config.json
-          echo "    {\"Escritorio\": \"Test Case 2\", \"description\": \"Test Description 2\"}" >> test-config.json
-          echo "  ]" >> test-config.json
-          echo "}">> test-config.json
+           echo '{' > test-config.json  # Abrimos el bloque JSON
+            echo "  \"testCases\": [" >> test-config.json
+            echo "    {\"Escritorio\": \"Test Case 1\", \"description\": \"Test Description 1\"}," >> test-config.json
+            echo "    {\"Escritorio\": \"Test Case 2\", \"description\": \"Test Description 2\"}" >> test-config.json
+            echo "  ]" >> test-config.json
+            echo '}' >> test-config.json  # Cerramos el bloque JSON
         shell: powershell
-
+      
       # Paso 4: Compilar el proyecto (si es un proyecto Maven)
       - name: Build project using Maven
         run: mvn clean install
