@@ -51,5 +51,5 @@ jobs:
         with:
           name: test-results
           path: |
-            target/test-classes  # Asegúrate de cambiar esta ruta a donde se guardan los resultados
+            GitHubjson/test-classes  
             test-config.json  # El archivo .json generado
