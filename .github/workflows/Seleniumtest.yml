@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '23'  
-          distribution: 'adopt'
+          distribution: 'temurin'
           cache: maven
 
       # Paso 3: Crear el archivo .json con los datos de configuración de las pruebas
