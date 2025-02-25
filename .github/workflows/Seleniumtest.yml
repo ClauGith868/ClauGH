@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest  # Usamos windows-latest para ejecutar en un entorno Windows
+    runs-on: windows-latest  # Usamos windows-latest para ejecutar en un entorno Windows.
 
     steps:
       # Paso 1: Hacer checkout del repositorio
